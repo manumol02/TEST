@@ -1,4 +1,4 @@
-def suma_elementos(lista, objetivo):
+def elementos(lista, objetivo):
     diccionario = {}
     for num in lista:
         complemento = objetivo - num
@@ -10,5 +10,5 @@ def suma_elementos(lista, objetivo):
 
 lista = [3, 6, 9, 12, 4, 1]
 objetivo = 10
-resultado = suma_elementos(lista, objetivo)
-print(resultado)  
+resultado = elementos(lista, objetivo)
+print(resultado) 

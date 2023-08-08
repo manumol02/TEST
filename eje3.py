@@ -1,22 +1,15 @@
-def max_difference(nums):
-    if not nums or len(nums) < 2:
-        return "No hay suficientes números para calcular la diferencia máxima"
+def distancia(numeros):
+    if not numeros or len(numeros) < 2:
+        return "No hay suficientes números para calcular el número menor y mayor"
 
-    menor= nums[0]
-    max_diff = nums[1] - nums[0]
+    menor = min(numeros)
+    mayor = max(numeros)
+    max_diff = max(numeros)-min(numeros)
 
-    for i in range(1, len(nums)):
-        comparacion = nums[i] - menor
-        if comparacion> max_diff:
-            max_diff = comparacion
-        if nums[i] < menor:
-            menor= nums[i]
+    return menor, mayor,max_diff
 
-    return max_diff
+numeros = [7, 2, 9, 5, 1, 6]
+resultado_min,resultado_max ,max_diff= distancia(numeros)
 
-numeros =  [7, 1, 9, 5, 2, 6]
-
-maxima_diferencia = max_difference(numeros)
-
-print("La máxima diferencia es", maxima_diferencia)
+print(max_diff,"the maximum difference is between", resultado_min,"and",resultado_max)
 

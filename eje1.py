@@ -9,7 +9,7 @@ def ordenar(lista):
     mayores = []
 
     for i in range(1, len(lista)):
-        if lista[i] < pivote:
+        if lista[i] > pivote:
             menores.append(lista[i])
         else:
             mayores.append(lista[i])
@@ -17,7 +17,7 @@ def ordenar(lista):
     menores = ordenar(menores)
     mayores = ordenar(mayores)
 
-    return menores + [pivote] + mayores
+    return mayores + [pivote] + menores
 
 lista_ordenada = ordenar(lista)
 print("Lista ordenada:", lista_ordenada)
